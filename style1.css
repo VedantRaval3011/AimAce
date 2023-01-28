@@ -6,12 +6,12 @@
   font-family: 'Poppins',sans-serif;
 }
 ::selection{
-  color: #000;
+  color: #841f1f;
   background: #fff;
 }
 nav{
   position: fixed;
-  background: #1b1b1b;
+  background: #841f1f;
   width: 100%;
   padding: 10px 0;
   z-index: 12;
@@ -51,7 +51,7 @@ nav .menu{
 }
 .menu ul li a:hover{
   background: #fff;
-  color: black;
+  color: #841f1f;
 }
 /* .img{
   background: url('img3.jpg')no-repeat;
