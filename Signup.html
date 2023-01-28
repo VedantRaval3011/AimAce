@@ -7,11 +7,11 @@
 </head>
 <body>
 	<div class="box">
-		<form autocomplete="off">
+		<form autocomplete="off" onsubmit="return validateForm()">
 			<h2>Sign Up</h2>
             <div class="inputBox">
 				<input type="text" required="required">
-				<span>Userame</span>
+				<span>Username</span>
 				<i></i>
 			</div>
 			<div class="inputBox">
@@ -20,17 +20,28 @@
 				<i></i>
 			</div>
 			<div class="inputBox">
-				<input type="password" required="required">
+				<input type="password" id="password" required="required">
 				<span>Password</span>
 				<i></i>
 			</div>
             <div class="inputBox">
-				<input type="password" required="required">
+				<input type="password" id="conf_password" required="required">
 				<span>Confirm Password</span>
 				<i></i>
 			</div>
 			<input type="submit" value="Create Account">
 		</form>
 	</div>
+	<script type="text/javascript">
+		function validateForm(){
+		var pswd= document.getElementById('password').value;
+		var conf_pswd = document.getElementById('conf_password').value;
+
+		if(pswd != conf_pswd){
+			alert("Enter valid Confirm Password");
+			return false;
+		}
+	}
+	</script>
 </body>
 </html>
