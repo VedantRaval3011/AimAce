@@ -245,11 +245,12 @@ section
 	left: 0;
 	width: 100%;
 	height: 80px;
-	padding: 0 10%;
+	padding: 0 100px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	box-sizing: border-box;
+	z-index: 10000;
 }
 .header .logo
 {
@@ -342,6 +343,13 @@ section
 	}
 }
 
+.fa-times.x2,
+.fa-bars.x2{
+	font-size: 28px;
+	cursor: pointer;
+	display: none;
+}
+
 @media (max-width: 1280px){
 	section{
 		height : auto !important;
@@ -365,19 +373,31 @@ section
 }
 
 @media (max-width: 991px){
+
+	.fa-bars.x2{
+		display: block;
+
+	}
+	.fa-times.x2{
+		position: absolute;
+		top:20px;
+		right: 40px;
+		display: block;
+
+	}
 	.bannerText h2{
 		font-size: 3em;
 	}
 	.bannerText h3{
 		font-size: 1.5em;
-		animation-delay: 3s;
+		/* animation-delay: 3s; */
 	}
 	.element1{
 		display: none;
 	}
 	.header ul{
 		position: fixed;
-		background: white;
+		background: #fff;
 		top: 0;
 		left: 0;
 		right: 0;
@@ -402,8 +422,16 @@ section
 	.header ul li:nth-child(3),
 	.header ul li:nth-child(4),
 	.header ul li:nth-child(5),
-	.header ul li:nth-child(6)
-	{
+	.header ul li:nth-child(6) {
 		animation-delay: 0s !important;
+	}
+}
+
+@media (max-width: 991px){
+	section{
+		padding: 50px 80px 50px 50px;
+	}
+	.header{
+		padding: 0 50px;
 	}
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -18,13 +18,13 @@
 			<div class="header">
 				<h2 class="logo">AimAce</h2>
 				<i class="fa fa-bars x2" onclick="menuToggle()"></i>
-				<ul id="naviation">
-					<li><a href="#home">Home</a></li>
+				<ul id="nevigation">
+					<li><a href="#home" class="active">Home</a></li>
                     <li><a href="#">Task</a></li>   
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="Login.html">Login/Signup</a></li>
-					<i class="fa fa-time0s x2" onclick="menuToggle()"></i>
+					<i class="fa fa-times x2" onclick="menuToggle()"></i>
 				</ul>
 			</div>
 			<div class="bannerText">
@@ -38,7 +38,7 @@
 				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				<a href="#">Read More</a>
 			</div>
-			<img src="bulb.jpg" class="bulb">
+			<img src="bulb.jpg" class="bulb" alt="Bulb-Image">
 			<ul class="sci">
 				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -48,5 +48,11 @@
 			<div class="element1"></div>
 			<div class="element2"></div>
 		</section>
+		<script type="text/javascript">
+			function menuToggle() {
+				var element = document.getElementById("nevigation");
+				element.classList.toggle("show");
+			}
+		</script>
 	</body>
 </html>
